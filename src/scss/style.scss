@@ -1,0 +1,39 @@
+@import './custom.scss';
+
+body {
+    header {  
+        .bg-dark {
+            background-color: #343a40!important;
+        }
+
+        .img-fluid {
+            border-radius: 25% 10%;
+            width: 60px;
+            height: 60px;
+        }
+
+        .navbar-brand{
+            font-size: 1.5rem;
+        }
+
+        .position-fixed{
+            z-index: 10000;
+        }
+    }
+
+    .album{
+        .card-img-top{
+            object-fit:cover;
+            height: 400px;
+        }
+    }
+
+    footer{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .img-fluid{
+            width: 200px;
+        }
+    }
+
+}

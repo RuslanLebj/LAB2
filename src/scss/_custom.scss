@@ -1,0 +1,28 @@
+// Импортируем то что надо перезаписать
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+// Перезаписываем переменные брейкпоинтов
+$grid-breakpoints: (
+  xs: 0,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1500px // Добавлен брейкоинт для широкого экрана
+);
+
+$container-max-widths: (
+  xs: 0,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1500px // Добавлен брейкоинт для широкого экрана
+);
+
+
+//Переопределяем !default переменные значениями, которые мы установили выше
+@import '~bootstrap/scss/bootstrap';
