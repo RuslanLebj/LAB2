@@ -11,22 +11,22 @@ $(document).ready(() => {
 
   $(document).on('keydown', navigateCards);
 
-  $(document).on('click', '#modal .slide-btn', function(){
+  $(document).on('click', '#modal .slide-btn', function () {
     const modal = $(document).find("#modal");
-    const cardsList = $(document).find('.card').toArray().map((item)=>{
+    const cardsList = $(document).find('.card').toArray().map((item) => {
       return $(item).attr('id')
     });
     const current = cardsList.findIndex(element => element == modal.attr("current-item"));
 
-    if(current == -1){
+    if (current == -1) {
       throw new Error("invalid card index");
     }
-    
-    if($(this).hasClass("btn-prev")){
-      const prevSlide = current > 0 ? cardsList[current-1] : cardsList[cardsList.length - 1];
+
+    if ($(this).hasClass("btn-prev")) {
+      const prevSlide = current > 0 ? cardsList[current - 1] : cardsList[cardsList.length - 1];
       fillModal(modal, $(document).find(`#${prevSlide}`));
-    } else if($(this).hasClass("btn-next")){
-      const nextSlide = current < cardsList.length-1 ? cardsList[current+1] : cardsList[0];
+    } else if ($(this).hasClass("btn-next")) {
+      const nextSlide = current < cardsList.length - 1 ? cardsList[current + 1] : cardsList[0];
       fillModal(modal, $(document).find(`#${nextSlide}`));
     }
   });
@@ -65,6 +65,15 @@ saveNewButton.addEventListener('click', (event) => {
   const newName = $('#new-name').val();
   const newDescription = $('#new-description').val();
 
+  if (!newimg || !newName || !newDescription) {
+    alert("Fill out all the fields of the form!");
+    return;
+  }
+  else if (/^\d/.test(newName)) {
+    alert("The name cannot begin with a number!");
+    return;
+  }
+
   const newObject = {
     id: objects.length + 1,
     img: newimg,
@@ -73,7 +82,7 @@ saveNewButton.addEventListener('click', (event) => {
   };
 
   objects.push(newObject);
-  let html = template_cards({objects});
+  let html = template_cards({ objects });
   let app = document.getElementById('cards');
   app.innerHTML = html;
 
@@ -90,12 +99,21 @@ saveButton.addEventListener('click', (event) => {
   const newName = $('#name').val();
   const newDescription = $('#description').val();
 
+  if (!newimg || !newName || !newDescription) {
+    alert("Fill out all the fields of the form!");
+    return;
+  }
+  else if (/^\d/.test(newName)) {
+    alert("The name cannot begin with a number!");
+    return;
+  }
+
   const id = $('#modal').attr('current-item');
   const elements = id.split('-').slice(1) - 1;
   objects[elements].img = $('#img').val();
   objects[elements].name = $('#name').val();
   objects[elements].description = $('#description').val();
-  let html = template_cards({objects});
+  let html = template_cards({ objects });
   let app = document.getElementById('cards');
   app.innerHTML = html;
 });
