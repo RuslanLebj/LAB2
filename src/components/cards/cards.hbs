@@ -1,0 +1,11 @@
+{{#each objects}}
+<div class="col-md-4">
+  <div class="card mb-4 shadow-sm" data-bs-toggle="modal" data-bs-target="#modal" id="object-{{id}}">
+    <img class="card-img-top" src={{img}} alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{name}} </h5>
+      <p class="card-text">{{description}}</p>
+    </div>
+  </div>
+</div>
+{{/each}}

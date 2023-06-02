@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="module" src="./index.js"></script>
+<script type="module" src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script type="module" src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+<script type="module" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="module" src="./script/script.js"></script>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEAD INSIDE COMMUNITY RUSSIA</title>
+  <link href="./components/header/header.scss" rel="stylesheet" type="text/css">
+  <link href="./components/cards/cards.scss" rel="stylesheet" type="text/css">
+  <link href="./components/footer/footer.scss" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <header id="header"></header>
+  <div class="jumbotron py-3 bg-light">
+
+    <div class="container">
+      <h1 class="jumbotron-heading">Community members</h1>
+    </div>
+  </div>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row" id="cards">
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-muted" id="footer"></footer>
+
+  <div id="modal_edit"></div>
+
+  <div id="modal_create"></div>
+  
+</body>
+
+</html>
