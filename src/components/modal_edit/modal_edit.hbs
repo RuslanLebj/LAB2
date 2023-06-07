@@ -1,0 +1,32 @@
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="nmodal" aria-hidden="true" current-item="">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="card-modal-label">Add new member</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="card-form">
+          <div class="mb-3">
+            <label for="img" class="form-label">Link of the picture</label>
+            <input type="text" class="form-control" id="img" name="img">
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Members name</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Members description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-prev slide-btn">&laquo; Previous</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success" id="save-button" data-bs-dismiss="modal" >Accept</button>
+        <button type="button" class="btn btn-default btn-next slide-btn">Next member &raquo;</button>
+      </div>
+    </div>
+  </div>
+</div>

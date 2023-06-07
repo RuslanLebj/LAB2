@@ -1,0 +1,21 @@
+@import '~bootstrap/scss/bootstrap';
+
+header {  
+    .bg-dark {
+        background-color: #343a40!important;
+    }
+
+    .img-fluid {
+        border-radius: 25% 10%;
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar-brand{
+        font-size: 1.5rem;
+    }
+
+    .position-fixed{
+        z-index: 10000;
+    }
+}
