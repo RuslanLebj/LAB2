@@ -10,8 +10,6 @@ let xhttp_select = new XMLHttpRequest();
 xhttp_select.addEventListener('readystatechange', function(){
     // если с запросом, который пришел от сервера, все в порядке
     if (xhttp_select.readyState === 4 && xhttp_select.status === 200){
-        console.log(xhttp_select.response);
-        console.log("событие сработало");
 
         // распарсили ответ от сервера, т.е распарсим файл JSON
         let response = JSON.parse(xhttp_select.response);
